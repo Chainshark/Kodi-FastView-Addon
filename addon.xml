@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.fastview" name="FastView" version="0.0.1" provider-name="Tommy V">
+<addon id="plugin.video.fastview" name="Fast View" version="0.0.1" provider-name="Tommy">
 <requires>
   <import addon="xbmc.python" version="2.1.0"/>
 </requires>
-<extension point="xbmc.addon.video">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.python.pluginsource" library="addon.py">
+<extension point="xbmc.python.script" library="addon.py">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary lang="en_gb">Start and end episodes of a show at your own intervals.</summary>
-  <description lang="en_gb">This addon is created to skip a TV show or
-  a serie's intro video and the credits at the end.
-  You set a specific start and ending point for a certain show and
-  this addon starts and ends an episode on those specific points.</description>
-  <disclaimer lang="en_gb"></disclaimer>
-  <language></language>
+  <summary lang="en">Start and end episodes of a show at your own intervals.</summary>
+  <description lang="en_gb">This addon is created to skip a TV show or a serie's intro video and the credits at the end. You set a specific start and ending point for a certain show and this addon starts and ends an episode on those specific points.</description>
+  <language>en</language>
   <platform>all</platform>
   <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-  <forum></forum>
-  <website></website>
-  <email></email>
   <source>https://github.com/Chainshark/plugin.video.fastview</source>
   <news>Pre-alpha phase, please ignore.</news>
   <assets>
       <icon>icon.png</icon>
-      <fanart></fanart>
-      <screenshot></screenshot>
   </assets>
 </extension>
 </addon>

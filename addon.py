@@ -3,7 +3,7 @@ import urllib
 import urlparse
 import xbmcgui
 import xbmcplugin
-
+import xbmcaddon
 base_url = sys.argv[0]
 addon_handle = int(sys.argv[1])
 args = urlparse.parse_qs(sys.argv[2][1:])
@@ -14,7 +14,10 @@ def build_url(query):
     return base_url + '?' + urllib.urlencode(query)
 
 mode = args.get('mode', None)
-
+my_addon = xbmcaddon.Addon(id="plugin.video.fastview")
+starttime = my_addon.getSetting('starttime')
+endtime = my_addon.getSetting('endtime')
+selectedfolder = my_addon.getSetting('showfolder')
 if mode is None:
     url = build_url({'mode': 'folder', 'foldername': 'Folder One'})
     li = xbmcgui.ListItem('Folder One', iconImage='DefaultFolder.png')
